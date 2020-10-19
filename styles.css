@@ -280,8 +280,9 @@ body {
 }
 
 .footer {
-    margin-top: 6mm;
+    margin-top: 3mm;
     padding: 5mm;
+    padding-top: 4mm;
     padding-bottom: 5mm;
     font: "Helvetica";
     color: white;
