@@ -4,7 +4,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FAFAFA;
-    font: 12pt "Helvetica";
+    font: 10pt "Helvetica";
+}
+
+.containter {
+    min-height: max-content;
 }
 
 * {
@@ -13,8 +17,10 @@ body {
 }
 
 .page {
+    position: relative;
     width: 210mm;
     height: 297mm;
+    max-height: 297mm;
     margin: 10mm auto;
     border: 1px #D3D3D3 solid;
     border-radius: 5px;
@@ -23,14 +29,31 @@ body {
 }
 
 .header {
-    padding: 6mm 10mm;
+    padding: 12mm 12mm;
+    padding-bottom: 8mm;
     font: "Helvetica";
     color: white;
     background: #1b262c;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.contactme {
+    color: white;
+    background: #2d4450;
+    padding: 2mm 12mm;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    font-size: 10pt;
+}
+
+.contactme a {
+    color: white;
+    text-decoration: none;
 }
 
 .header img {
@@ -42,41 +65,31 @@ body {
 
 .header h1 {
     margin: 0mm;
-    margin-top: 5mm;
-    font: 32pt "Helvetica";
+    text-align: center;
+    font: 26pt "Helvetica";
     text-transform: uppercase;
 }
 
 .header h2 {
     margin: 0mm;
-    text-align: right;
-    font: 16pt "Helvetica";
+    text-align: center;
+    font: 14pt "Helvetica";
     text-transform: uppercase;
 }
 
 .coreskills {
-    margin: 2mm 5mm;
+    margin: 2mm 12mm;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-.coreskills div {
-    padding: 0mm 2mm;
-    margin: 0mm 1mm;
-    width: 40mm;
-}
-
-.coreskills h1 {
-    font-size: 11pt;
-    text-align: center;
-}
-
-.coreskills h2 {
-    position: relative;
-    font-size: 9pt;
-    margin: 3pt 0pt;
+#email {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 #js {
@@ -136,105 +149,21 @@ body {
 }
 
 .experience {
+    margin: 2mm 12mm;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-.time {
-    width: 50mm;
-    border-right: black 1pt solid;
+.experience h2 {
+    margin: 0px;
+    font-size: 12pt;
 }
 
-.company {
-    padding: 2mm 5mm;
-    margin-left: 10px;
-}
-
-.company p {
+.experience h3 {
+    margin: 0px;
     font-size: 10pt;
-    margin: 4pt 0pt;
-}
-
-.company h1 {
-    font-size: 18pt;
-    margin: 3pt 0px;
-}
-
-.company h2::before {
-    text-align: right;
-    position: absolute;
-    min-width: 60px;
-    min-height: 20px;
-    left: -110px;
-    top: 0px;
-    background-color: white;
-}
-
-.company h2 {
-    position: relative;
-    font-size: 12pt;
-    margin: 6pt 0px;
-}
-
-.company h2::after {
-    content: '';
-    position: absolute;
-    min-width: 20px;
-    min-height: 20px;
-    left: -44px;
-    background-color: white;
-    border: 4px solid black;
-    top: -5px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.company h3 {
-    position: relative;
-    font-size: 0pt;
-    margin: 0pt 0px;
-}
-
-.company h3::after {
-    content: '';
-    position: absolute;
-    min-width: 20px;
-    min-height: 20px;
-    left: -44px;
-    background-color: white;
-    border: 4px solid black;
-    top: -25px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.company h3::before {
-    text-align: right;
-    position: absolute;
-    min-width: 60px;
-    min-height: 20px;
-    left: -110px;
-    top: -20px;
-    font-size: 12pt;
-    background-color: white;
-}
-
-#present::before {
-    content: 'Present';
-}
-
-#y2017::before {
-    content: '2017';
-}
-
-#y2015::before {
-    content: '2015';
-}
-
-#y2013::before {
-    content: '2013';
 }
 
 .skills {
@@ -279,34 +208,26 @@ body {
     border-right: 0px;
 }
 
-.footer {
-    margin-top: 3mm;
-    padding: 5mm;
-    padding-top: 4mm;
-    padding-bottom: 5mm;
-    font: "Helvetica";
-    color: white;
-    background: #0f4c75;
-}
-
-.contactme {
-    margin: 0mm 2mm;
-    padding-top: 0.5mm;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
 .contactme img {
     height: 16px;
     vertical-align: top;
 }
 
+.footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    bottom: 0;
+    padding: 2mm;
+    margin-bottom:0px;
+    color: white;
+    background: #0f4c75;
+}
+
 #legal {
     padding: 2mm;
-    padding-bottom: 0mm;
-    font-size: 6pt;
+    font-size: 8pt;
 }
 
 @page {
